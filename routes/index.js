@@ -9,6 +9,7 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/getAllResults', function(req, res, next) {
+  res.set({ 'content-type': 'application/json; charset=utf-8' });
   res.json(jsonfile.readFileSync(STOREJSON));
 });
 
